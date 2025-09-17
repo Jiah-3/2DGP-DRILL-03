@@ -7,19 +7,27 @@ character = load_image('character.png')
 
 x = 20
 y = 90
+shape = 0
 while(True):
     clear_canvas_now()
     grass.draw_now(400, 30)
     character.draw_now(x, y)
-    if(x < 780 and y == 90):
-        x += 5
-        delay(0.01)
-    elif(y < 560 and x == 780):
-        y += 5
-        delay(0.01)
-    elif(y == 560 and x > 20):
-        x -= 5
-        delay(0.01)
-    elif(y > 90 and x == 20):
-        y -= 5
-        delay(0.01)
+    if(shape == 0):
+        if(x < 780 and y == 90):
+            x += 5
+            delay(0.01)
+        elif(y < 560 and x == 780):
+            y += 5
+            delay(0.01)
+        elif(y == 560 and x > 20):
+            x -= 5
+            delay(0.01)
+        elif(y > 90 and x == 20):
+            y -= 5
+            delay(0.01)
+        if(x == 20 and y == 90):
+            shape = 1
+    elif(shape == 1):
+        if(x < 780 and y == 90):
+            x += 5
+            delay(0.01)
