@@ -31,3 +31,13 @@ while(True):
         if(x < 780 and y == 90):
             x += 5
             delay(0.01)
+        elif(x > 400 and y < 560):
+            x -= 5
+            y += 470 / 76.0
+            delay(0.01)
+        elif(x <= 400 and y > 90):
+            x -= 5
+            y -= 470 / 76.0
+            delay(0.01)
+        if(x == 20 and y == 90):
+            shape = 2
