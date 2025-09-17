@@ -11,5 +11,6 @@ while(True):
     clear_canvas_now()
     grass.draw_now(400, 30)
     character.draw_now(x, y)
-    x += 2
-    delay(0.01)
+    if(x < 780):
+        x += 2
+        delay(0.01)
