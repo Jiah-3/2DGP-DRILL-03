@@ -12,8 +12,14 @@ while(True):
     grass.draw_now(400, 30)
     character.draw_now(x, y)
     if(x < 780 and y == 90):
-        x += 2
+        x += 5
         delay(0.01)
     elif(y < 560 and x == 780):
-        y += 2
+        y += 5
+        delay(0.01)
+    elif(y == 560 and x > 20):
+        x -= 5
+        delay(0.01)
+    elif(y > 90 and x == 20):
+        y -= 5
         delay(0.01)
